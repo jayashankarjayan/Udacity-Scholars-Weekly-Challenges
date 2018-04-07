@@ -9,22 +9,59 @@
             android:id="@+id/card_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            card_view:cardCornerRadius="4dp"
-            android:layout_margin="10dp">
+            card_view:cardCornerRadius="2dp"
+            android:layout_margin="@dimen/half_spacing"
+            android:padding="@dimen/spacing">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing"
+                android:layout_marginBottom="@dimen/spacing">
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon"
+                    android:padding="5dp"
+                    card_view:layout_constraintLeft_toRightOf="@id/tv_name"
+                    android:background="@drawable/round_icon"
+                    android:layout_marginLeft="@dimen/spacing"
+                    android:layout_marginStart="@dimen/spacing"
+                    android:layout_marginEnd="@dimen/spacing"
+                    android:layout_marginRight="@dimen/spacing"/>
 
                 <TextView
-                    android:layout_marginBottom="4dp"
-                    android:layout_marginTop="4dp"
-                    android:padding="6dp"
-                    android:gravity="center_horizontal"
                     android:id="@+id/tv_name"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textStyle="bold"
                     android:textColor="@android:color/primary_text_light"
-                    android:textSize="18sp"
+                    android:textSize="19sp"
                     tools:text="Name or Title"
-                    tools:elevation="3dp"/>
+                    tools:elevation="3dp"
+                    card_view:layout_constraintLeft_toRightOf="@id/icon"
+                    android:layout_marginLeft="@dimen/spacing"
+                    android:layout_marginStart="@dimen/spacing"
+                    android:layout_marginEnd="@dimen/spacing"
+                    android:layout_marginRight="@dimen/spacing"/>
+
+
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    card_view:layout_constraintTop_toBottomOf="@id/tv_name"
+                    card_view:layout_constraintLeft_toRightOf="@id/icon"
+                    tools:text="Description"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="@dimen/spacing"
+                    android:layout_marginStart="@dimen/spacing"
+                    android:layout_marginEnd="@dimen/spacing"
+                    android:layout_marginRight="@dimen/spacing"
+                    android:layout_marginBottom="@dimen/spacing"/>
+
+            </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.CardView>
 
 

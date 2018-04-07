@@ -38,13 +38,10 @@ public class MainActivity extends AppCompatActivity {
     private void loadData(){
 
         mArrayList = new ArrayList<>();
-
-        mArrayList.add(new Model("Constraint Layout"));
-        mArrayList.add(new Model("Linear Layout"));
-        mArrayList.add(new Model("Relative Layout"));
-        mArrayList.add(new Model("Card View"));
-        mArrayList.add(new Model("Scroll Views"));
-        mArrayList.add(new Model("Grid View"));
+        for(int i=1;i<=30;i++)
+        {
+            mArrayList.add(new Model("Udacity","First Week Challenge"));
+        }
 
         mAdapter = new MyAdapter(mArrayList);
         mRecyclerView.setAdapter(mAdapter);

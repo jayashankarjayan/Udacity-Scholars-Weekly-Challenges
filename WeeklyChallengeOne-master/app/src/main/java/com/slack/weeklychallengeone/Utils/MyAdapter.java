@@ -30,6 +30,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.tv_name.setText(mArrayList.get(position).getName());
+        holder.desc.setText(mArrayList.get(position).getDesc());
     }
 
     @Override
@@ -39,11 +40,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
 
     class MyViewHolder extends RecyclerView.ViewHolder{
-        private TextView tv_name;
+        private TextView tv_name,desc;
         MyViewHolder(View view) {
             super(view);
 
             tv_name = view.findViewById(R.id.tv_name);
+            desc = view.findViewById(R.id.desc);
 
         }
     }
